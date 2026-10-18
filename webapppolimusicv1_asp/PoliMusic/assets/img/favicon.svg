@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="PoliMusic">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#57c7ff"/>
+      <stop offset=".55" stop-color="#2f6bff"/>
+      <stop offset="1" stop-color="#7b61ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="24" height="24" rx="5.6" fill="url(#g)"/>
+  <path d="M9.4 17.8V6.6l9.2-1.9v10.7" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="6.9" cy="18" r="2.3" fill="#ffffff"/>
+  <circle cx="16.1" cy="15.7" r="2.3" fill="#ffffff"/>
+</svg>
