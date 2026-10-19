@@ -11,8 +11,8 @@ hdrRole = CStr(Session("RoleName") & "")
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title><%=H(pageTitle)%> · <%=APP_NAME%></title>
-<meta name="description" content="PoliMusic: tu música, en azul.">
-<meta name="theme-color" content="#070b14">
+<meta name="description" content="PoliMusic: tu música, en una experiencia rosada y aesthetic.">
+<meta name="theme-color" content="#ffeee9">
 <link rel="icon" type="image/svg+xml" href="<%=Url("assets/img/favicon.svg")%>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,8 +117,9 @@ hdrRole = CStr(Session("RoleName") & "")
           <small><%=H(hdrRole)%></small>
         </span>
       </a>
-      <a class="icon-btn" href="<%=Url("logout.asp")%>" title="Cerrar sesión" aria-label="Cerrar sesión">
+      <a class="sidebar-logout" href="<%=Url("logout.asp")%>" title="Cerrar sesión" aria-label="Cerrar sesión">
         <svg class="icon" viewBox="0 0 24 24"><use href="#i-logout"></use></svg>
+        <span>Salir</span>
       </a>
     </div>
   </aside>

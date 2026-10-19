@@ -57,7 +57,7 @@ End If
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Iniciar sesión · <%=APP_NAME%></title>
-<meta name="theme-color" content="#070b14">
+<meta name="theme-color" content="#ffeee9">
 <link rel="icon" type="image/svg+xml" href="<%=Url("assets/img/favicon.svg")%>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

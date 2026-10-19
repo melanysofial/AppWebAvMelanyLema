@@ -166,7 +166,7 @@ activeNav = "home"
 <section class="section">
   <div class="section-head">
     <h2 class="section-title">
-      <svg class="icon" viewBox="0 0 24 24"><use href="#i-headphones"></use></svg>Canciones más escuchadas
+      <svg class="icon" viewBox="0 0 24 24"><use href="#i-headphones"></use></svg>Song List
     </h2>
     <% If Not rsSongs.EOF Then %>
     <button class="btn btn-ghost btn-sm" type="button" data-play-all="#homeTracks">
