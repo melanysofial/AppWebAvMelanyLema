@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="claro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fdeaf2">
+    <title>Chat Rose · WebSocket</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <!-- Fondo decorativo difuminado ( Glassmorphism ) -->
+    <div class="fondo" aria-hidden="true">
+        <span class="orbe orbe--uno"></span>
+        <span class="orbe orbe--dos"></span>
+        <span class="orbe orbe--tres"></span>
+    </div>
+
+    <main class="chat" aria-label="Chat WebSocket">
+        <header class="chat__cabecera">
+            <div class="chat__identidad">
+                <span class="chat__icono" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5 8.4 8.4 0 0 1-3.2-.6L4 20l1.6-4.6A7.5 7.5 0 0 1 5 11.5 7.5 7.5 0 0 1 12.5 4 7.5 7.5 0 0 1 20 11.5Z"/>
+                        <path d="M9 11.5h.01M12.5 11.5h.01M16 11.5h.01"/>
+                    </svg>
+                </span>
+                <div>
+                    <h1 class="chat__titulo">Chat <span>Rose</span></h1>
+                    <p class="chat__subtitulo">EPN FIS · WebSocket</p>
+                </div>
+            </div>
+
+            <div class="chat__meta">
+                <div class="estado" id="status" data-estado="reconectando" role="status" aria-live="polite">
+                    <span class="estado__punto" aria-hidden="true"></span>
+                    <span class="estado__texto" id="statusText">Reconectando</span>
+                </div>
+
+                <div class="contador" aria-live="polite">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M16 20v-1.5a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/>
+                        <circle cx="9" cy="7" r="3.2"/>
+                        <path d="M22 20v-1.5a4 4 0 0 0-3-3.8M16.5 4.2a3.2 3.2 0 0 1 0 6"/>
+                    </svg>
+                    <strong id="userCountValue">0</strong>
+                    <span id="userCountLabel">conectados</span>
+                </div>
+
+                <label class="interruptor" for="themeToggle">
+                    <span class="interruptor__texto">Modo oscuro</span>
+                    <input class="interruptor__input" type="checkbox" id="themeToggle" aria-label="Activar modo oscuro">
+                    <span class="interruptor__pista" aria-hidden="true">
+                        <span class="interruptor__bolita"></span>
+                    </span>
+                </label>
+            </div>
+        </header>
+
+        <section class="chat__conversacion" id="messages" aria-label="Mensajes del chat" aria-live="polite" aria-relevant="additions"></section>
+
+        <div class="chat__escritura" id="typingIndicator" aria-live="polite">
+            <span class="puntos" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span id="typingText"></span>
+        </div>
+
+        <footer class="chat__compositor">
+            <div class="campo">
+                <label for="usernameInput">Tu nombre</label>
+                <input type="text" id="usernameInput" maxlength="20" autocomplete="nickname" placeholder="Ingresa tu nombre">
+            </div>
+
+            <div class="campo">
+                <label for="messageInput">Mensaje</label>
+                <form class="formulario" id="messageForm" autocomplete="off">
+                    <input type="text" id="messageInput" maxlength="500" placeholder="Escribe tu mensaje...">
+                    <button type="submit" class="boton-enviar" id="sendBtn" aria-label="Enviar mensaje" disabled>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M4.5 12h14M13 6.5 18.5 12 13 17.5"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+            <p class="validacion" id="validationHint" role="alert"></p>
+        </footer>
+    </main>
+</body>
+</html>
